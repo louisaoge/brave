@@ -1,4 +1,4 @@
-# brave
+#Brave
 
 ## Project setup
 ```
