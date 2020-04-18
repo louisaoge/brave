@@ -1,8 +1,7 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<div div="custom-home">
+<HelloWorld/>
+</div>
 </template>
 
 <script>
@@ -16,3 +15,13 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+div#custom-home{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+</style>

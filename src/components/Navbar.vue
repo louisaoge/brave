@@ -38,6 +38,30 @@
   
 <style scoped>
 
+nav.navbar{
+    height: 6rem;
+}
 
+a.navbar-brand{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    
+}
+
+li.nav-item {
+    text-transform: uppercase;
+
+}
+@media only screen and (max-width: 767px) {
+    div#navbarCollapse {
+        width: 100%;
+        position: fixed;
+        top: 75px;
+        left: 0;
+        padding-left: 20px;
+        padding-bottom: 5px;
+        background-color: #202643;
+    }
+}
 </style>
 
