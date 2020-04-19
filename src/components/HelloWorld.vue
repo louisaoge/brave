@@ -4,7 +4,8 @@
   <p class="lead">Broadcast Manager</p>
   <hr class="my-4">
   <p>Click below to explore</p>
-  <a class="btn btn-success btn-lg" href="#" role="button"> Explore</a>
+  <router-link class="btn btn-success btn-lg" to="/tasks">Explore
+  </router-link>
 </div>
 </template>
  

@@ -1,31 +1,47 @@
   <template>
   <header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top custom-bg-dark">
-    <a class="navbar-brand" href="#">
-            <img style="max-height:75px;" alt="Vue logo" src="../assets/brave_logo.jpg">
-    </a>
+    <!-- <b-button v-b-toggle.sidebar-no-header class="mb-2 mr-2">
+       <b-icon icon="list" variant="outline-light">
+        </b-icon>   
+    </b-button> -->
+    <router-link to="/" class="navbar-brand">
+      <img style="max-height:75px;" alt="App logo" 
+      src="../assets/brave_logo.jpg">
+    </router-link>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home </a>
+        <li class="nav-item">
+          <router-link to="/" class="nav-link">
+          Home
+        </router-link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Tasks</a>
+           <router-link to="/tasks" class="nav-link">
+            Tasks
+          </router-link>
         </li>
          <li class="nav-item">
-          <a class="nav-link" href="#">Register</a>
+           <router-link to="/register" class="nav-link">
+            Register
+          </router-link>
         </li>
          <li class="nav-item">
-          <a class="nav-link" href="#">Login</a>
+           <router-link to="/login" class="nav-link">
+            Login
+          </router-link>
         </li>
          <li class="nav-item">
           <a class="nav-link" href="#">Logout</a>
         </li>
          <li class="nav-item">
-          <a class="nav-link" href="#">Louisa</a>
+          <a class="nav-link" href="#">
+            {{ this.$store.state.username ?
+            this.$store.state.username : 'User' }}
+            </a>
         </li>
       </ul>
     </div>
@@ -52,8 +68,8 @@ li.nav-item {
     text-transform: uppercase;
 
 }
-@media only screen and (max-width: 767px) {
-    div#navbarCollapse {
+@media screen and (max-width: 767px) {
+    #navbarCollapse {
         width: 100%;
         position: fixed;
         top: 75px;
